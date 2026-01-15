@@ -112,10 +112,10 @@ El siguiente diagrama ilustra el flujo de control implementado en `AgentGraph.ja
 graph TD
     START((Inicio)) --> STEP1[📝 Generar Borrador]
     STEP1 --> SAVE1[(💾 Checkpoint)]
-    SAVE1 --> HUMAN{👤 Feedback Humano<br/>(Interrupt)}
+    SAVE1 --> HUMAN{👤 Feedback Humano<br>Interrupt}
     
     HUMAN -- Input recibido --> RESUME((Reanudar))
-    RESUME --> UPDATE[🔄 updateState<br/>(Inyectar Feedback)]
+    RESUME --> UPDATE[🔄 updateState<br>Inyectar Feedback]
     UPDATE --> STEP3[✨ Refinar Respuesta]
     STEP3 --> END((Fin))
 

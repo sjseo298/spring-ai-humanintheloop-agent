@@ -37,7 +37,7 @@ Estas instrucciones definen **cómo construir aplicaciones de IA en este reposit
   - **Conversational Memory:** (`ChatMemory`) Para que el agente recuerde lo dicho anteriormente. Usar `MessageChatMemoryAdvisor`.
   - **Graph State Persistence:** (`Checkpointer`) Para guardar el estado *exacto* de la ejecución (variables, nodo actual) y permitir pausar/reanudar.
 - **Implementación de Checkpointers (Spring AI Alibaba Graph):**
-  - **Core Dependency:** Usar `spring-ai-alibaba-graph-core` (v1.1.0.0 o superior).
+  - **Core Dependency:** Usar `spring-ai-alibaba-graph-core` (v1.1.0.0 o superior). Asegúrate de agregar la dependencia correspondiente en tu `pom.xml`.
   - **Configuración de Beans:** Anotar la clase `@Configuration` con `@Configuration(proxyBeanMethods = false)` para prevenir errores de CGLIB y referencias circulares.
   - **Persistencia (FileSystem):**
     - Usar `FileSystemSaver` con `SpringAIJacksonStateSerializer`.
